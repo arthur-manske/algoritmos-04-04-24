@@ -1,0 +1,26 @@
+#!/usr/bin/node
+
+const userInput = require(`readline-sync`); 
+
+const string = userInput.question("Write something: ");
+
+let stringToUpper = string.toUpperCase();
+let stringToILang = string.replaceAll("o", "i");
+
+const padding = Math.max(stringToUpper.length, stringToILang.length, 14);
+
+function label(labelText, maxLabel)
+{
+	if (labelText.includes('\n'))
+		return process.stdout.write(`${labelText}`);
+
+	return process.stdout.write(`${labelText}${' '.repeat(maxLabel - labelText.length)}`);
+}
+
+label("Upper case:", padding);
+label("I Language:", padding);
+label("Length:\n", padding); 
+
+label(stringToUpper, padding);
+label(stringToILang, padding);
+label(`${string.length}\n`, padding); 

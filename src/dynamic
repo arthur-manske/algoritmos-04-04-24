@@ -1,0 +1,16 @@
+#!/usr/bin/node
+
+let arr = [1, 2, 3, 4, 5, 6];
+
+console.log(`arr.length: ${arr.length}`);
+
+console.log(`Pushing a element.`);
+
+arr.push(7); 
+
+console.log(`arr.length: ${arr.length}`);
+console.log(`Removing elements at 3 and 4 indexes.`);
+
+arr.splice(3, 2);
+
+console.log(`arr.length: ${arr.length}`);

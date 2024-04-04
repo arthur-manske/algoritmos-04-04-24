@@ -1,0 +1,15 @@
+#!/usr/bin/node
+
+const characters = ["Sasuke", "Naruto", "Madara", "Obito", "Kakashi", "Danzou", "Hinata", "Sakura", "Tsunade", "Jiraya", "Gaara", "Nagato", "Itachi"];
+
+function getRandomCharacter()
+{
+	/* let i = Math.floor(Math.random() * characters.length); */
+	/* converts to integer with floor method (closer lesser then the actual number integer value) */
+	let i = Math.round(Math.random() * characters.length); 
+	/* converts to integer with round, the closest integer number */
+	return characters[i];
+}
+
+console.log(`Você é o(a): ${getRandomCharacter()}`);
+

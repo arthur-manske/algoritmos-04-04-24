@@ -1,0 +1,5 @@
+#!/usr/bin/node
+
+let name = "Arthur de Souza Manske", color = "azul";
+
+console.log("A cor favorita de " + name + " é " + color + ".");
