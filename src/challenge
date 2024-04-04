@@ -2,13 +2,19 @@
 
 const characters = ["Sasuke", "Naruto", "Madara", "Obito", "Kakashi", "Danzou", "Hinata", "Sakura", "Tsunade", "Jiraya", "Gaara", "Nagato", "Itachi", "Orochimaru"];
 
+/* implements for namespace Math to got a enhanced use */
+Math.randomInRange = function (min, max)
+{
+	/* let i = Math.floor((Math.random() * (max - min)) + min); */
+	/* converts to integer with floor method (closer lesser then the actual number integer value) */
+	let n = Math.round((Math.random() * (max - min)) + min);
+	/* converts to integer with round, the closest integer number */
+	return n;
+}
+
 function getRandomElem(array)
 {
-	/* let i = Math.floor(Math.random() * characters.length); */
-	/* converts to integer with floor method (closer lesser then the actual number integer value) */
-	let i = Math.round(Math.random() * (array.length - 1)); 
-	/* converts to integer with round, the closest integer number */
-	return array[i];
+	return array[Math.randomInRange(0, array.length - 1)]; 
 }
 
 console.log(`Você é o(a): ${getRandomElem(characters)}`);
